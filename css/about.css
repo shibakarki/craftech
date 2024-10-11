@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b0c10, #1f2833); /* Dark gradient background */
+    color: #c5c6c7; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+/* Main Content Styles */
+main {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+.about-section {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+.about-section:hover {
+    border-color: rgb(255, 0, 255); /* RGB border on hover */
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+}
+
+/* Achievement Image Styles */
+.about-section-img {
+    width: 100%;
+    max-width: 400px; /* Max width for larger images */
+    height: auto;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+/* Milestones Section */
+#achievements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#achievements .about-section {
+    flex: 1 1 48%; /* Each milestone takes up 48% of the container on larger screens */
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+#achievements .about-section h3 {
+    font-size: 1.5rem;
+}
+
+#achievements .about-section p {
+    font-size: 1rem;
+}
+
+#achievements .about-section img {
+    width: 100%;
+    max-width: 300px; /* Control image size */
+    border-radius: 7px;
+}

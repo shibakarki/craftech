@@ -1,0 +1,47 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Dark gradient background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}

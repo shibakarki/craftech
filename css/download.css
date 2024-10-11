@@ -1,0 +1,241 @@
+/* General Styling for Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1f2833;
+    color: #c5c6c7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Recent Downloads Section */
+#recent-downloads h2 {
+    color: #66fcf1;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Flexbox for the recent downloads container */
+.recent-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Tutorial block will take up to 30% of the container's width for 3 blocks in a row */
+.tutorial-block {
+    background-color: #0b0c10;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Adjust width for 3 blocks in a row, minus some space for gaps */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.recent-block, .download-block {
+    background-color: #0b0c10;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-block:hover {
+    transform: translateY(-5px);
+}
+
+.tutorial-block:hover {
+    transform: translateY(-5px);
+}
+
+/* RGB Border effect on hover */
+.recent-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
+}
+
+.recent-block:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00);
+    background-size: 300%;
+    animation: rgb-border 5s linear infinite; /* Animation for RGB border */
+    z-index: -1; /* Behind the block */
+}
+
+/* Thumbnail for recent downloads */
+.recent-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recent-block h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Buttons inside recent blocks */
+.recent-block .download-link {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7b500;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: 48%; /* Two buttons side by side */
+}
+
+.recent-block .download-link:hover {
+    background-color: #d3a300;
+}
+
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #66fcf1;
+}
+
+/* Top Downloads Section */
+#top-downloads {
+    padding: 40px 20px;
+    text-align: left; /* Align text to the left */
+}
+
+#top-downloads h2 {
+    color: #66fcf1;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Blocks container - vertical layout */
+.top-downloads-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+/* Flex layout for the description, buttons, and thumbnail */
+.download-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-and-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 55%; /* Adjust width of the description and buttons area */
+}
+
+.description-and-buttons p {
+    margin-bottom: 15px;
+    color: #c5c6c7;
+}
+
+.download-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Download button styles */
+.download-link {
+    padding: 10px;
+    background-color: #f7b500;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 150px; /* Set a fixed width for buttons */
+}
+
+.download-link:hover {
+    background-color: #d3a300;
+}
+
+/* Thumbnail styling */
+.download-content img {
+    width: 40%; /* Adjust the width of the image */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Line separator between blocks */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #c5c6c7;
+    margin: 30px 0;
+}
+
+/* Tutorial Downloads Section */
+#tutorial-downloads h2 {
+    color: #66fcf1;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tutorial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+
+/* Thumbnail inside each block */
+.tutorial-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tutorial-block h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Download buttons inside tutorial block */
+.tutorial-block .download-link {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f7b500;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    width: 48%; /* Buttons take 48% width, leaving space for two buttons side by side */
+}
+
+.tutorial-block .download-link:hover {
+    background-color: #d3a300;
+}

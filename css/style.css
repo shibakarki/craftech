@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0b0c10, #1f2833); /* Dark gradient background */
+    color: #c5c6c7; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 20px;
+    color: #fff;
+    background: url('../images/headbg.jpg') no-repeat center center/cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: padding 0.3s ease;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    transition: max-width 0.3s ease;
+}
+
+.header-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f7b500;
+}
+
+/* Hide the menu toggle button and make sure nav is visible by default on large screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Sidebar for smaller screens */
+@media (max-width: 1440px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .main-nav {
+        position: fixed;
+        right: -100%; /* Start off-screen on the right */
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: white; /* White background */
+        z-index: 999;
+        transition: right 0.3s ease; /* Smooth transition */
+        color: black; /* Black text */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .main-nav ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        font-size: 1.2rem;
+        color: black; /* Black text */
+    }
+
+    .main-nav ul li a:hover {
+        color: #f7b500;
+    }
+
+    .main-nav.active {
+        right: 0; /* Slide into view from the right */
+    }
+
+    .close-btn {
+        display: block; /* Show close button in mobile */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+    }
+
+    .logo {
+        max-width: 100px; /* Resize logo */
+    }
+}
+
+/* Ensure the nav menu is visible on larger screens */
+@media (min-width: 1441px) {
+    .main-nav {
+        position: static; /* Default position */
+        height: auto;
+        background-color: transparent; /* No background */
+        color: white; /* Keep text white */
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal layout */
+        margin: 0;
+    }
+
+    .main-nav ul li {
+        margin: 0 15px;
+    }
+
+    .main-nav ul li a {
+        font-size: 1rem;
+        color: white; /* Keep the text white */
+    }
+
+    .close-btn {
+        display: none; /* Hide the close button on large screens */
+    }
+}
+
+
+
+
+
+
+
+/* Explore Categories Section */
+#explore-categories {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    max-width: 300px;
+    text-align: center;
+}
+
+.category-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.category-item img:hover {
+    scale: 1.05;
+}
+
+.category-item h3 {
+    color: #66fcf1;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #c5c6c7;
+}
+
+.category-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #45a29e; /* Teal button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-item a:hover {
+    background-color: #0b0c10;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50; /* Dark background for footer */
+    color: #fff; /* Light text color */
+    padding: 20px 0; /* Top and bottom padding */
+    text-align: center; /* Centered text */
+    position: relative; /* Ensures footer is relative for positioning */
+    margin-top: 20px; /* Space above footer */
+}
+
+.footer-container {
+    max-width: 1100px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center footer */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between sections */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.footer-links, .footer-socials, .footer-credits {
+    flex: 1 1 30%; /* Flex grow and shrink, with minimum width of 30% */
+    margin: 10px; /* Margin around sections */
+}
+
+.footer-links h3, .footer-socials h3 {
+    font-size: 1.5rem; /* Size of section titles */
+    margin-bottom: 10px; /* Space below titles */
+}
+
+.footer-links ul, .footer-socials ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links ul li, .footer-socials ul li {
+    margin: 5px 0; /* Space between list items */
+}
+
+.footer-links ul li a {
+    color: #f7b500; /* Link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Transition effect on hover */
+}
+
+.footer-links ul li a:hover {
+    color: #fff; /* Change link color on hover */
+}
+
+.footer-socials ul li {
+    display: inline; /* Display social icons inline */
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-icon {
+    width: 30px; /* Size of social media icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.footer-credits {
+    margin-top: 20px; /* Space above credits */
+    text-align: center; /* Center text */
+}
