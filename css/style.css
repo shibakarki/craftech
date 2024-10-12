@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     padding: 2rem 20px;
     color: #fff;
-    background: url('../images/headbg.jpg') no-repeat center center/cover;
+    background: url('../images/headbg.webp') no-repeat center center/cover;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     transition: padding 0.3s ease;
 }
