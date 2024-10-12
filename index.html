@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrafTech</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS file -->
+    <style>
+    /* Loading screen styles */
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000; /* Black background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* On top of everything */
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+
+    .loading-logo {
+        max-width: 200px;
+        height: auto;
+        animation: logoFadeOut 3s ease forwards; /* Fades out the logo */
+    }
+
+    @keyframes logoFadeOut {
+        0% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { opacity: 0; } /* Fades out */
+    }
+
+    .loading-screen.fade-out {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s ease;
+    }
+    /* Channel Introduction Section */
+#channel-intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+#channel-intro h2 {
+    color: #66fcf1; /* Teal headings */
+}
+
+#channel-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f7b500; /* Yellow button */
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #d3a300; /* Darker yellow on hover */
+}
+
+/* Latest Videos Section */
+#latest-videos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#latest-videos h2 {
+    color: #66fcf1;
+    margin-bottom: 20px;
+}
+
+.featured-video {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.featured-video iframe {
+    border: 4px solid #45a29e; /* Teal border for the video */
+    border-radius: 10px;
+}
+
+.see-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #45a29e; /* Teal button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more:hover {
+    background-color: #0b0c10;
+    transform: scale(1.05);
+}
+</style>
+
+</head>
+<body>
+
+    <div class="loading-screen">
+        <img src="images/thh.webp" alt="CrafTech Logo" class="loading-logo">
+    </div>
+
+    <!-- Hero Section -->
+    <header>
+    <img src="images/thh.webp" alt="CrafTech Logo" class="logo"> <!-- Logo Image -->
+    <div class="header-text">
+        <h1>Wellcome</h1>
+        <p>Here we dive into the world of Minecraft gaming, tutorials, and livestreams.</p>
+    </div>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button> <!-- Sidebar toggle button -->
+    <nav class="main-nav" id="navMenu">
+        <button class="close-btn" id="closeBtn">&times;</button> <!-- Close button -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="minecraft/about.html">About</a></li>
+            <li><a href="minecraft/contact.html">Contact</a></li>
+            <li><a href="minecraft/download.html">Downloads</a></li>
+            <li><a href="minecraft/merch.html">Merch Store</a></li> <!-- Optional -->
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Channel Introduction -->
+    <section id="channel-intro">
+        <h2>INTRO</h2>
+        <p>CrafTech is a dynamic YouTube channel dedicated to providing engaging tutorials and livestreams for gaming enthusiasts. In addition to video content, the CrafTech website serves as a hub for gamers, offering easy access to a variety of schematic and world downloads, enhancing the gameplay experience. Whether you're looking to learn new techniques or download exciting game worlds, CrafTech is your go-to resource for all things gaming!</p>
+        <a href="minecraft/about.html" class="learn-more">Learn More About Me</a>
+    </section>
+
+    <!-- Latest Videos Section -->
+    <section id="latest-videos">
+        <h2>Latest Videos</h2>
+        <div class="featured-video">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KjHFjt5H_RI?si=8lBFVHl1wkoiP3zi" title="Ominous Bottle Farm 1.21" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g-ndyO-kUS8?si=nwWF90YtPSy0OY3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            
+
+            <p>Check out the latest tutorials and gaming videos on my YouTube channel!</p>
+            <a href="https://www.youtube.com/@crafTech26" class="see-more">See More Videos on YouTube</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Explore Categories -->
+    <section id="explore-categories">
+        <h2>Explore CrafTech</h2>
+        <div class="category-grid">
+
+
+            <div class="category-item">
+                <img src="images/gameplay.webp" alt="Gameplay Videos">
+                <h3>Gameplay Videos</h3>
+                <p>Check out the latest Minecraft gameplay videos.</p>
+                <a href="https://www.youtube.com/@SHIB-fi3co/videos">View Gameplay</a>
+            </div>
+
+
+            <div class="category-item">
+                <img src="images/tutorial-playlist.webp" alt="Tutorials">
+                <h3>Tutorials</h3>
+                <p>Learn the best tips and tricks with my Minecraft tutorials.</p>
+                <a href="https://youtube.com/playlist?list=PLdu5H-xo4DOjrXAJ1n_YAL1KtjD246rr0&si=WWwilho-EBGcgsPI">View Tutorials</a>
+            </div>
+
+
+            <div class="category-item">
+                <img src="images/download-playlist.webp" alt="Downloads">
+                <h3>Downloads</h3>
+                <p>Grab some cool Minecraft maps and schematics.</p>
+                <a href="minecraft/download.html">Get Downloads</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+    <img src="images/thh.webp" alt="CrafTech Logo" class="logo"> <!-- Logo Image -->
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="minecraft/about.html">About</a></li>
+                <li><a href="minecraft/contact.html">Contact</a></li>
+                <li><a href="minecraft/download.html">Downloads</a></li>
+                <li><a href="merch.html">Merch Store</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-socials">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCl5FHXJQ0LQXtaLnRzPxfcw" target="_blank"><img src="images/yt-logo.webp" alt="YouTube" class="social-icon"></a></li>
+                <li><a href="https://www.instagram.com/your-profile" target="_blank"><img src="images/insta-logo.webp" alt="Instagram" class="social-icon"></a></li>
+                <li><a href="https://discord.gg/pKByPch8" target="_blank"><img src="images/discord-logo.webp" alt="Discord" class="social-icon"></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-credits">
+            <p>&copy; 2024 CrafTech. All rights reserved.</p>
+            <p>Designed by Shiba Karki with the help of AI</p>
+        </div>
+    </div>
+</footer>
+<script src="main.js"></script>
+<script>
+    window.addEventListener('load', function() {
+    // Check if the user has already seen the loading screen in this session
+    if (!sessionStorage.getItem('loadingSeen')) {
+        // Display loading screen for the first time
+        setTimeout(function() {
+            document.querySelector('.loading-screen').classList.add('fade-out');
+
+            setTimeout(function() {
+                // Hide loading screen after fade-out
+                document.querySelector('.loading-screen').style.display = 'none';
+            }, 800); // 1 second delay to match fade-out time
+        }, 1000); // 1.2 second delay before starting fade-out
+
+        // Set flag in sessionStorage to mark the loading screen as seen
+        sessionStorage.setItem('loadingSeen', 'true');
+    } else {
+        // If loading screen was already shown, hide it immediately
+        document.querySelector('.loading-screen').style.display = 'none';
+    }
+});
+
+</script>
+
+
+</body>
+</html>
