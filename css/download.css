@@ -1,0 +1,143 @@
+
+
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #66fcf1;
+}
+
+/* Schematic Downloads Section */
+#schematic-downloads {
+    padding: 40px 20px;
+}
+
+.schematic-downloads-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Download Block Styling */
+.download-block {
+    background-color: #0b0c10;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column; /* Mobile-first design */
+    gap: 20px;
+}
+
+.download-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
+    background-color: #161825;
+}
+
+.download-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f7b500;
+}
+
+/* Layout for Desktop: Description and Thumbnail Side-by-Side */
+@media (min-width: 769px) {
+    .download-block {
+        flex-direction: row; /* Align elements in a row */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .download-block h3 {
+        flex: 0.5; /* Title takes its own line */
+        margin-bottom: 20px;
+    }
+
+
+
+    .download-description {
+        flex: 2; /* Description and buttons together */
+        margin-right: 20px;
+        flex-direction: column;
+    }
+
+    .download-thumbnail {
+        flex: 1;
+        max-width: 300px; /* Set a consistent image size */
+        align-self: center;
+    }
+}
+
+/* Description Styling */
+.download-description p {
+    margin-bottom: 15px;
+    color: #c5c6c7;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Thumbnail Styling */
+.download-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.download-thumbnail img:hover {
+    transform: scale(1.04);
+}
+
+/* Download Buttons Styling */
+.download-links {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to adjust for smaller screens */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.download-link {
+    padding: 10px;
+    background-color: #f7b500;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex: 1; /* Ensures even spacing for buttons */
+    max-width: 200px; /* Optional: limits button width */
+}
+
+.download-link:hover {
+    background-color: #d3a300;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .download-block {
+        text-align: center;
+    }
+
+    .download-thumbnail {
+        margin: 0 auto; /* Center image */
+        max-width: 70%;
+    }
+
+    .download-links {
+        justify-content: center; /* Center buttons */
+    }
+
+    .download-link {
+        width: auto; /* Resize buttons for mobile */
+        padding: 10px 15px;
+    }
+}

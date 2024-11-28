@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litematica Mod Guide</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <!-- Combined Header Section -->
+<header>
+    <!-- Logo -->
+    <img src="images/thh.webp" alt="CrafTech Logo" class="logo"> 
+
+    <!-- Header Text -->
+    <div class="header-text">
+        <h1>Welcome to CrafTech</h1>
+        <p>Master the art of Minecraft gaming, tutorials, and schematics with step-by-step guides and livestreams!</p>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="menu-toggle" id="menuToggle">&#9776;</button> 
+
+    <!-- Main Navigation -->
+    <nav class="main-nav" id="navMenu">
+        <!-- Close Button for Sidebar -->
+        <button class="close-btn" id="closeBtn">&times;</button> 
+        <ul>
+            <!-- General Navigation Links -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="minecraft/about.html">About</a></li>
+            <li><a href="minecraft/contact.html">Contact</a></li>
+            <li><a href="minecraft/download.html">Downloads</a></li>
+            <li><a href="minecraft/merch.html">Merch Store</a></li>
+            <li><a href="litematic_guide.html">Litematica Guide</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+    <!-- Guide Content -->
+    <main>
+        <!-- Introduction -->
+        <section id="intro">
+            <h2>What is Litematica?</h2>
+            <p>Litematica is a powerful mod for Minecraft that helps you load, create, and replicate schematic builds. It's perfect for creative and technical builders!</p>
+            <img src="intro-image.png" alt="Litematica Overview"> <!-- Placeholder for image -->
+        </section>
+
+        <!-- Prerequisites -->
+        <section id="prerequisites">
+            <h2>Prerequisites</h2>
+            <p>Before using Litematica, make sure you have the following installed:</p>
+            <ul>
+                <li>Minecraft Forge or Fabric Loader</li>
+                <li>Litematica Mod</li>
+                <li>MaLiLib (Required Library)</li>
+            </ul>
+            <img src="prerequisites.png" alt="Prerequisites Installation"> <!-- Placeholder for image -->
+        </section>
+
+        <!-- Setup -->
+        <section id="setup">
+            <h2>Setting Up Litematica</h2>
+            <p>Follow these steps to install and set up Litematica:</p>
+            <ol>
+                <li>Install Fabric Loader from the official website.</li>
+                <li>Download the Litematica and MaLiLib mods for your version.</li>
+                <li>Place the mod files in the `.minecraft/mods` folder.</li>
+                <li>Launch Minecraft using the Fabric loader.</li>
+            </ol>
+            <img src="setup-image.png" alt="Setting Up Litematica"> <!-- Placeholder for image -->
+        </section>
+
+        <!-- Usage -->
+        <section id="usage">
+            <h2>How to Use Litematica</h2>
+            <h3>Loading a Schematic</h3>
+            <p>Press <strong>M</strong> to open the menu and select a schematic file. Adjust the position and start building block by block!</p>
+            <img src="usage-load.png" alt="Loading a Schematic"> <!-- Placeholder for image -->
+
+            <h3>Adjusting the Schematic</h3>
+            <p>Move, rotate, or modify the schematic using the placement tool. Adjust layers for better visibility while building.</p>
+            <img src="usage-adjust.png" alt="Adjusting a Schematic"> <!-- Placeholder for image -->
+
+            <h3>Creating Your Own Schematic</h3>
+            <p>Select two corners of your build and save the area as a schematic to share or reuse later.</p>
+            <img src="usage-create.png" alt="Creating a Schematic"> <!-- Placeholder for image -->
+        </section>
+
+        <!-- Tips -->
+        <section id="tips">
+            <h2>Tips for Using Litematica</h2>
+            <ul>
+                <li>Customize keybinds for a better experience.</li>
+                <li>Use the material list to gather resources in Survival Mode.</li>
+                <li>Organize schematics into subfolders for easy access.</li>
+            </ul>
+            <img src="tips-image.png" alt="Tips for Litematica"> <!-- Placeholder for image -->
+        </section>
+    </main>
+
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#intro">What is Litematica?</a></li>
+                    <li><a href="#prerequisites">Prerequisites</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCl5FHXJQ0LQXtaLnRzPxfcw" target="_blank"><img src="images/yt-logo.webp" alt="YouTube" class="social-icon"></a></li>
+                <li><a href="https://www.instagram.com/your-profile" target="_blank"><img src="images/insta-logo.webp" alt="Instagram" class="social-icon"></a></li>
+                <li><a href="https://discord.gg/pKByPch8" target="_blank"><img src="images/discord-logo.webp" alt="Discord" class="social-icon"></a></li>
+            </ul>
+        </div>
+
+            <div class="footer-credits">
+            <p>&copy; 2024 CrafTech. All rights reserved.</p>
+            <p>Designed by Shiba Karki with the help of AI</p>
+        </div>
+
+
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+<script>
+    window.addEventListener('load', function() {
+    // Check if the user has already seen the loading screen in this session
+    if (!sessionStorage.getItem('loadingSeen')) {
+        // Display loading screen for the first time
+        setTimeout(function() {
+            document.querySelector('.loading-screen').classList.add('fade-out');
+
+            setTimeout(function() {
+                // Hide loading screen after fade-out
+                document.querySelector('.loading-screen').style.display = 'none';
+            }, 800); // 1 second delay to match fade-out time
+        }, 1000); // 1.2 second delay before starting fade-out
+
+        // Set flag in sessionStorage to mark the loading screen as seen
+        sessionStorage.setItem('loadingSeen', 'true');
+    } else {
+        // If loading screen was already shown, hide it immediately
+        document.querySelector('.loading-screen').style.display = 'none';
+    }
+});
+
+</script>
+
+</body>
+</html>
