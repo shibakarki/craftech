@@ -66,16 +66,13 @@ header.scrolled .logo {
     transition: opacity 0.3s ease; /* Smoothly hide */
 }
 
+/* Header Styles */
 header.scrolled .header-text p {
-    opacity: 0; /* Hide paragraph */
-    visibility: hidden; /* Ensure it doesn't take up space */
-    height: 0; /* Remove height contribution */
+    visibility: hidden; /* Make paragraph invisible without affecting layout */
+    opacity: 0; /* Smoothly fade out */
+    height: auto; /* Keep height unchanged */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
 }
-
-
-
-
-
 
 nav ul {
     list-style: none;
@@ -103,10 +100,6 @@ nav ul li a:hover {
 .menu-toggle {
     display: none;
     margin-right: 10px;
-}
-
-.menu-toggle:hover{
-    color: yellow;
 }
 
 /* Sidebar for smaller screens */
@@ -178,31 +171,85 @@ nav ul li a:hover {
     }
 }
 
-/* Ensure the nav menu is visible on larger screens */
-@media (min-width: 1441px) {
+/* Sidebar for smaller screens */
+@media (max-width: 1024px) { /* Adjust breakpoint as needed */
+    .menu-toggle {
+        display: block; /* Show the menu toggle button */
+    }
+
     .main-nav {
-        position: static;
-        height: auto;
-        background-color: transparent;
-        color: white;
+        display: flex;
+        position: fixed;
+        right: -100%; /* Start off-screen */
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #1f2833;
+        color: #c5c6c7;
+        z-index: 1000;
+        flex-direction: column;
+        padding: 20px;
+        transition: right 0.3s ease;
     }
 
     .main-nav ul {
-        flex-direction: row;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .main-nav.active {
+        right: 0; /* Slide in when active */
+    }
+
+    .close-btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        color: #c5c6c7;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/* Direct menu visibility on desktop screens */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none; /* Hide toggle button */
+    }
+
+    .main-nav {
+        display: flex; /* Show menu inline */
+        position: static; /* Reset positioning */
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row; /* Horizontal layout */
+        justify-content: flex-end;
+        padding: 0;
+        box-shadow: none; /* Remove sidebar effects */
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal links */
         margin: 0;
     }
 
     .main-nav ul li {
-        margin: 0 15px;
+        background-color: ;
+        margin: 0 15px; /* Space between items */
     }
 
     .main-nav ul li a {
-        font-size: 1rem;
         color: white;
+        text-decoration: ;
+        font-size: 1.1rem;
     }
 
     .close-btn {
-        display: none; /* No close button on large screens */
+        display: none; /* No close button on desktop */
     }
 }
 
