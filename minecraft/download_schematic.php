@@ -2,37 +2,35 @@
 // Check if the 'file' parameter is set and not empty
 if (isset($_GET['file']) && !empty($_GET['file'])) {
     // Sanitize the file parameter
-    $file = basename($_GET['file']); // basename ensures no directory traversal
+    $file = basename($_GET['file']); // Extract the file name only
     $filePath = 'files/schematics/' . $file; // Construct the file path
 
-    // Debugging: Print the file path for testing
-    if (!file_exists($filePath)) {
-        // Uncomment this line during debugging to check the file path
-        // echo "File not found: " . $filePath;
-        header('Location: notavailable.html');
-        exit;
-    }
+    // Debugging: Print file path to verify correctness
+    echo "Requested File: " . $file . "<br>";
+    echo "Full Path: " . $filePath . "<br>";
 
-    // If the file exists, process the download
-    if (file_exists($full_file_path)) {
-            // Set headers to force download with the title as the filename
-            header('Content-Description: File Transfer');
-            header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="' . $title . '.litematica"');
-            header('Content-Length: ' . filesize($full_file_path));
-            readfile($full_file_path);
-            exit;
+    // Check if the file exists
+    if (file_exists($filePath)) {
+        echo "File exists! Preparing for download...<br>";
 
-        // Read and output the file
+        // Set headers for file download
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . $file . '"');
+        header('Content-Length: ' . filesize($filePath));
+
+        // Output the file content
         readfile($filePath);
         exit;
     } else {
-        // If file doesn't exist, redirect to notavailable.html
+        echo "File does not exist: " . $filePath . "<br>";
+        // Redirect to 'notavailable.html'
         header('Location: notavailable.html');
         exit;
     }
 } else {
-    // Redirect to notavailable.html if 'file' parameter is missing or empty
+    echo "Invalid or missing 'file' parameter.<br>";
+    // Redirect to 'notavailable.html'
     header('Location: notavailable.html');
     exit;
 }
