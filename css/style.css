@@ -282,10 +282,11 @@ nav ul li a:hover {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .category-item img:hover {
-    scale: 1.05;
+    transform: scale(1.04);
 }
 
 .category-item h3 {
