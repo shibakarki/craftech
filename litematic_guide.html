@@ -6,21 +6,18 @@
     <title>Litematica Mod Guide</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/litematica_guide.css">
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687782545042843"
-        crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Combined Header Section -->
     <header>
-        <img src="images/thh.webp" alt="CrafTech Logo" class="logo">
+        <img src="images/thh.webp" alt="CrafTech Logo" class="logo"> <!-- Logo Image -->
         <div class="header-text">
             <h1>Welcome</h1>
             <p>Here we dive into the world of Minecraft gaming, tutorials, and livestreams.</p>
         </div>
-        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <button class="menu-toggle" id="menuToggle">&#9776;</button> <!-- Sidebar toggle button -->
         <nav class="main-nav" id="navMenu">
-            <button class="close-btn" id="closeBtn">&times;</button>
+            <button class="close-btn" id="closeBtn">&times;</button> <!-- Close button -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="minecraft/about.html">About</a></li>
@@ -32,85 +29,142 @@
         </nav>
     </header>
 
-    <!-- Ad: Below Header -->
-    <div class="ad-container" style="text-align: center; margin: 10px 0;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7687782545042843"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7687782545042843"
+        crossorigin="anonymous"></script>
 
     <!-- Guide Content -->
     <main>
-        <!-- Introduction Section -->
+        <!-- Introduction -->
         <section id="intro">
             <h2>What is Litematica?</h2>
-            <p>Litematica is a powerful Minecraft mod designed for builders and technical players...</p>
+            <p>Litematica is a powerful Minecraft mod designed for builders and technical players. It allows you to load, create, and replicate schematic builds with precision and ease. Whether you're working on complex redstone contraptions or large-scale structures, Litematica provides the tools to make building more efficient and enjoyable.</p>
+            <ul>
+                <li><strong>Load Schematics:</strong> Overlay premade builds into your Minecraft world for guidance.</li>
+                <li><strong>Create Schematics:</strong> Save areas of your world as schematic files to reuse or share.</li>
+                <li><strong>Material Lists:</strong> Automatically generate material lists for Survival Mode.</li>
+                <li><strong>Layered Building:</strong> View schematics layer by layer for better organization.</li>
+                <li><strong>Highly Customizable:</strong> Adjust keybinds, rendering options, and configurations to suit your needs.</li>
+            </ul>
             <img src="images/intro-image.webp" alt="Litematica Overview" style="max-width: 80%; border-radius: 10px;">
-        </section>
 
-        <!-- Ad: After Introduction -->
-        <div class="ad-container" style="text-align: center; margin: 20px 0;">
+            <!-- Ad Placement 1 -->
             <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7687782545042843"
-                 data-ad-slot="9876543210"
-                 data-ad-format="rectangle"></ins>
+                style="display:block"
+                data-ad-client="ca-pub-7687782545042843"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-        </div>
+        </section>
 
-        <!-- Prerequisites Section -->
+        <!-- Prerequisites -->
         <section id="prerequisites">
             <h2>Prerequisites</h2>
-            <p>Before you can use Litematica, ensure you have the following installed...</p>
+            <p>Before you can use Litematica, ensure you have the following installed and ready:</p>
+            <ul>
+                <li><strong>Minecraft Forge or Fabric Loader:</strong> These are mod loaders required to run mods like Litematica.</li>
+                <li><strong>Litematica Mod:</strong> The main mod that provides all the schematic tools and features.</li>
+                <li><strong>MaLiLib:</strong> A mandatory library mod that powers Litematica’s functionality.</li>
+            </ul>
+            <h3>Where to Download</h3>
+            <p>You can download all the required files from their official websites:</p>
+            <ul>
+                <li><a href="https://fabricmc.net/" target="_blank">Fabric Loader</a></li>
+                <li><a href="https://www.curseforge.com/minecraft/mc-mods/litematica" target="_blank">Litematica Mod</a></li>
+                <li><a href="https://www.curseforge.com/minecraft/mc-mods/malilib" target="_blank">MaLiLib Library</a></li>
+            </ul>
             <img src="images/prerequisites.webp" alt="Litematica Prerequisites" style="max-width: 50%; border-radius: 10px;">
         </section>
 
-        <!-- Ad: Inline Content -->
-        <div class="ad-container" style="text-align: center; margin: 20px 0;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7687782545042843"
-                 data-ad-slot="4567891230"
-                 data-ad-format="horizontal"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        <!-- Ad Placement 2 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7687782545042843"
+            data-ad-slot="0987654321"
+            data-ad-format="horizontal"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 
-        <!-- Setup Section -->
+        <!-- Setup -->
         <section id="setup">
             <h2>Setting Up Litematica</h2>
-            <p>Follow these simple steps to install and set up Litematica...</p>
+            <p>Follow these simple steps to install and set up Litematica:</p>
+            <ol>
+                <li><strong>Download Fabric Loader:</strong> Visit the <a href="https://fabricmc.net/" target="_blank">Fabric Loader official website</a> and download the version that matches your Minecraft version.</li>
+                <li><strong>Download Litematica and MaLiLib:</strong> 
+                    Get the <a href="https://www.curseforge.com/minecraft/mc-mods/litematica" target="_blank">Litematica Mod</a> 
+                    and the <a href="https://www.curseforge.com/minecraft/mc-mods/malilib" target="_blank">MaLiLib Library</a> 
+                    files that match your Minecraft version.
+                </li>
+                <li><strong>Install Fabric Loader:</strong> Run the Fabric Loader installer and select your Minecraft directory. Click "Install" to set it up.</li>
+                <li><strong>Move Mod Files:</strong> Place the downloaded Litematica and MaLiLib `.jar` files into the `.minecraft/mods` folder. If the folder doesn’t exist, create it.</li>
+                <li><strong>Launch Minecraft:</strong> Open Minecraft using the Fabric Loader profile and ensure everything is working.</li>
+            </ol>
             <img src="images/setup.webp" alt="Setting Up Litematica" style="max-width: 70%; border-radius: 10px;">
+            <p>After completing these steps, you’ll have Litematica ready to use in your Minecraft world. Don’t forget to customize your keybinds and settings for an optimal experience!</p>
         </section>
 
-        <!-- Ad: Sticky Footer -->
-        <div class="sticky-ad" style="position: fixed; bottom: 0; width: 100%; text-align: center; background: #fff; z-index: 100;">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:100%;height:90px"
-                 data-ad-client="ca-pub-7687782545042843"
-                 data-ad-slot="3214569870"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+        <!-- Usage -->
+        <section id="usage">
+            <h2>Using Litematica</h2>
+            <p>Litematica is a powerful tool for creating, saving, and building structures in Minecraft. Here’s how you can use it effectively:</p>
+            <ol>
+                <li><strong>Load a Schematic:</strong> 
+                    <ul>
+                        <li>Press the default keybind (<code>M</code> for the Litematica menu).</li>
+                        <li>Select <strong>Schematic Manager</strong> and choose your desired schematic file.</li>
+                        <li>Click on <strong>Load Schematic</strong> to display the schematic in your world.</li>
+                    </ul>
+                </li>
+                <li><strong>Move or Adjust Schematic:</strong> 
+                    <ul>
+                        <li>Press the default keybind (<code>M</code>) and go to <strong>Schematic Placement</strong>.</li>
+                        <li>Use the Move Tool to adjust the position of the schematic to align with your build location.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Ad Placement 3 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7687782545042843"
+            data-ad-slot="1122334455"
+            data-ad-format="rectangle"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <img src="images/thh.webp" alt="CrafTech Logo" class="logo">
         <div class="footer-container">
-            <p>&copy; 2024 CrafTech. All rights reserved.</p>
-            <p>Designed by Shiba Karki with the help of AI</p>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="minecraft/about.html">About</a></li>
+                    <li><a href="minecraft/contact.html">Contact</a></li>
+                    <li><a href="minecraft/download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://youtube.com">YouTube</a></li>
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
